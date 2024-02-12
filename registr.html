@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, useer-scalable=0">
+   <link rel="stylesheet" href="css/log.css">
+
+   <title>Реєстрація</title>
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body class="">
+   <div class="alert">
+      <img src="images/alert_error.svg" alt="" class="alert_icon">
+      <p id="alertText"></p>
+      <div class="close_btn">
+         <img src="images/cancel_error.svg" alt="" class="cancel_icon">
+      </div>
+   </div>
+   <div class="wrapper">
+      <header class="header">
+         <div class="container">
+            <nav>
+               <img class="icon" type="icon" id='theme_mode' src="images/moon.svg" alt="">
+            </nav>
+         </div>
+      </header>
+
+      <main class="main">
+         <div class="container">
+            <form class="form-login" name="auth" action="" novalidate>
+
+               <h1 class="heading">Реєстрація</h1>
+
+               <input class="input email" type="email" id="email" placeholder="Пошта">
+               <a href="#" class="help-url"></a>
+
+               <!-- <input class="input" type="text" name="username" id="" placeholder="Нікнейм">
+               <a href="#" class="help-url"></a> -->
+
+               <div class="input-password">
+                  <input class="input password" type="password" id="password" placeholder="Пароль">
+                  <div class="icon-container">
+                     <img class="icon" name="eye" type="icon" src="images/eye_closed_light.svg" alt="">
+                  </div>
+               </div>
+
+               <a href="#" class="help-url"></a>
+               <div class="input-password">
+                  <input class="input password-confirm" type="password" name="passwordConfirm" id="password" placeholder="Підтвердіть пароль">
+                  <div class="icon-container">
+                     <img class="icon" name="eye" type="icon" src="images/eye_closed_light.svg" alt="">
+                  </div>
+               </div>
+               <a href="#" class="help-url"></a>
+
+               <button type="submit" class="clr-button clr-button-text button">
+                  Зареєструватися
+               </button>
+               <p class="help-url text-center">Вже маєте акаунт?
+                  <a href="login.html">
+                     Увійдіть!
+                  </a>
+               </p>
+
+               <h3 class="add-text">Або за допомогою:</h3>
+
+               <div class="service-icons">
+                  <button type="button" class="icon-bg"><img class="icon" type="icon" src="images/google_light.svg"
+                        alt=""></button>
+                  <button type="button" class="icon-bg"><img class="icon" type="icon" src="images/instagram_light.svg"
+                        alt=""></button>
+                  <button type="button" class="icon-bg"><img class="icon" type="icon" src="images/facebook_light.svg"
+                        alt=""></button>
+                  </div>
+            </form>
+         </div>
+      </main>
+   </div>
+
+   <script src="js/main.js"></script>
+   <script src="js/validation.js"></script>
+
+</body>
+
+</html>

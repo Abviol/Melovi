@@ -1,0 +1,284 @@
+﻿/* import styles */
+@import url("basics.css");
+@import url("keyframes.css");
+
+
+
+/* -------COMMON------------ */
+
+body {
+   background-color: var(--clr-bg);
+   transition: 0.2s all ease;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.container {
+   height: inherit;
+   margin: 0 30px;
+   display: flex;
+   flex-direction: column;
+   width: calc(100vw - 30px*2);
+}
+@media (min-width: 1000px) {
+   .main .container {
+      margin: 0 10vw;
+      width: 80vw;
+   }
+   .header .container {
+      margin: 0 calc(30px + 1vw);
+      width: calc(100vw - (30px + 1vw)*2);
+   }
+}
+@media (min-width: 1200px) {
+   .main .container {
+      margin: 0 33.333vw;
+      width: 33.333vw;
+   }
+}
+
+/* ------------Header--------------- */
+
+.header {
+   padding: 4vh 0;
+   width: auto;
+}
+.header .container nav {
+   display: flex;
+   justify-content: right;
+}
+
+#theme_mode {
+   height: 24px;
+   width: 24px;
+}
+@media (min-width: 720px) AND (min-height: 840px)  {
+   #theme_mode {
+      height: 32px;
+      width: 32px;
+   }
+}
+
+/* ----------Main---------------- */
+
+.main {
+   display: flex;
+   flex-grow: 1;
+}
+
+.form-login {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.heading {
+   font-size: var(--fs-big);
+   color: var(--clr-heading);
+   font-family: var(--ff-secondary);
+   margin: 0 0 3vh 0;
+   transition: 0.2s all ease;
+}
+
+.input-password {
+   display: flex;
+   flex-direction: row;
+   min-width: 100%;
+}
+.input {
+   height: 50px;
+   width: 100%;
+   margin: 0 0 1vh 0;
+   padding: 12px 16px;
+   border: none;
+   border-radius: 15px;
+   box-shadow:  0 0 0 0px var(--clr-input-text);
+   background-color: var(--clr-input);
+   color: var(--clr-input-text);
+   font-family: var(--ff-primary);
+   font-size: var(--fs-common);
+   transition: 0.2s all ease;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+   transition: background-color 5000s ease-in-out 0s;
+}
+::placeholder {
+   color: var(--clr-input-text);
+   transition: 0.2s all ease;
+   filter: brightness(75%);
+   opacity: 0.5;
+}
+.input:hover {
+   box-shadow: inset 0 0 0 1px;;
+   transition: 0.2s all ease;
+}
+.input:focus {
+   box-shadow: inset 0 0 0 2px;
+   outline: none;
+}
+@media (min-width: 720px) AND (min-height: 840px)  {
+   .input {
+      height: 60px;
+   }
+}
+
+.alert {
+   position: absolute;
+   display: none;
+   flex-direction: row;
+   right: 0;
+   min-width: 100px;
+   max-width: calc(100vw - 20px);
+   min-height: 60px;
+   margin: 15px 0 0 0;
+   padding: 10px 70px 10px 0;
+   background-color: #b8253d;
+   color: #fff;
+   border-radius: 10px;
+   font-size: var(--fs-small);
+   font-family: var(--ff-primary);
+   align-items: center;
+   overflow: hidden;
+}
+.alert.show-alert {
+   display: flex;
+   animation: messageShow 0.8s ease both;
+}
+.alert.hide {
+   display: flex;
+   animation: messageHide 0.8s ease both;
+}
+.alert .alert_icon {
+   position: relative;
+   margin: 0 10px 0 20px;
+}
+.alert .close_btn {
+   position: absolute;
+   display: flex;
+   right: 0%;
+   background-color: #9c142a;
+   height: 100%;
+   width: 45px;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+.close_btn .cancel_icon {
+   height: 24px;
+}
+.close_btn:hover {
+   background-color: #830f23;
+}
+
+.help-url {
+   min-width: 100%;
+   color: var(--clr-url-text);
+   font-size: var(--fs-common);
+   font-family: var(--ff-primary);
+   margin: 0 0 3vh 0;
+   transition: 0.2s all ease;
+}
+.help-url a {
+   color: var(--clr-url-text);
+   transition: 0.2s all ease;
+}
+
+.icon-container {
+   height: 24px;
+   width: 24px;
+   margin: 11px 0 0 -40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.icon-container img {
+   width: 100%;
+   height: 100%;
+}
+@media (min-width: 720px) AND (min-height: 840px)  {
+   .icon-container {
+         margin: 17px 0 0 -40px;
+      }
+}
+
+[type=icon] {
+   cursor: pointer;
+}
+
+.button {
+   font-size: var(--fs-middle);
+   font-family: var(--ff-primary);
+   height: 65px;
+   width: 100%;
+   margin: 0 0 1vh 0;
+   padding: auto;
+   border: none;
+   border-radius: 50px;
+   transition: 0.2s all ease;
+}
+.button:focus {
+   animation: buttonClick 0.5s alternate;
+/*    transition: 0.2s all ease; */
+}
+@media (min-height: 840px) AND
+(min-width:720px) {
+   .button {
+         height: 75px;
+      }
+}
+
+.add-text {
+   font-family: var(--ff-primary);
+   font-size: var(--fs-middle-sm);
+   letter-spacing: 2px;
+   color: var(--clr-input-text);
+   margin: 0 0 3vh 0;
+   transition: 0.2s all ease;
+}
+
+.service-icons {
+   width: 100%;
+   margin-bottom: 3vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.icon-bg {
+   display: flex;
+   height: 50px;
+   width: 50px;
+   padding: 10px;
+   background-color: var(--clr-input);
+   border: none;
+   border-radius: 50px;
+   justify-content: center;
+   align-items: center; 
+   cursor: pointer;
+   transition: 0.2s all ease;
+}
+.icon-bg:hover {
+   scale: 1.1;
+   transition: 0.2s all ease;
+}
+.icon-bg:focus {
+   animation: iconClick 0.5s alternate-reverse;
+}
+.icon-bg img {
+   height: 100%;
+}
+@media (min-width: 720px) AND (min-height: 840px)  {
+   .icon-bg {
+         height: 60px;
+         width: 60px;
+   }
+}

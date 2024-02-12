@@ -1,0 +1,284 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/* setting variables */
+:root {
+   --clr-primary-100: #E7E2FB;
+   --clr-primary-200: #efdbff;
+   --clr-primary-300: #ddc2ff;
+   --clr-primary-400: #d2b1fb;
+   --clr-primary-500: #c7a7ee;
+   --clr-primary-600: #a46ee6;
+   --clr-primary-700: #7b3ab0;
+   --clr-primary-800: #65239a;
+   --clr-primary-900: #481075;
+
+   --clr-secondary-0: #fff;
+   --clr-secondary-1: #000;
+   --clr-secondary-100: #f5f5f5;
+   --clr-secondary-200: #e6e6e6;
+   --clr-secondary-300: #d3d3d3;
+   --clr-secondary-400: #b6b6b6;
+   --clr-secondary-500: #888888;
+   --clr-secondary-600: #4b4b4b;
+   --clr-secondary-700: #363636;
+   --clr-secondary-800: #2a2a2a;
+   --clr-secondary-900: #121212;
+
+   --clr-transparent-dark-003: rgba(0, 0, 0, 0.03);
+   --clr-transparent-dark-005: rgba(0, 0, 0, 0.05);
+
+   --clr-transparent-light-005: rgba(255, 255, 255, 0.05);
+
+   /*    --ff-primary: 'Sora'; */
+   --ff-primary: 'Overpass';
+   /*    --ff-secondary: 'Oxygen'; */
+   --ff-secondary: 'Overpass';
+   /*    --ff-tertiary: 'Fira Sans Extra Condensed';
+ */
+   --ff-tertiary: 'Overpass';
+
+   --fw-400: regular;
+   --fw-500: 500;
+   --fw-600: 600;
+
+   --fs-100: .625rem;
+   --fs-200: .75rem;
+   --fs-300: .875rem;
+   --fs-400: 1rem;
+   --fs-500: 1.25rem;
+   --fs-600: 1.5625rem;
+   --fs-700: 1.875rem;
+   --fs-900: 2.5rem;
+   
+   
+   --fs-smaller: var(--fs-200);
+   --fs-small: var(--fs-300);
+   --fs-common: var(--fs-400);
+   --fs-middle-sm: var(--fs-500);
+   --fs-middle: var(--fs-600);
+   --fs-big: var(--fs-700);
+
+   --clr-heading: var(--clr-primary-900);
+   --clr-button: var(--clr-primary-800);
+   --clr-button-text: var(--clr-primary-300);
+   --clr-input: var(--clr-primary-300);
+   --clr-input-text: var(--clr-primary-900);
+   --clr-url-text: var(--clr-primary-800);
+
+   --clr-text: var(--clr-secondary-1);
+   --clr-bg: var(--clr-secondary-0);
+   --clr-bg-container: var(--clr-secondary-100);
+   --clr-bg-highlight: var(--clr-secondary-200);
+   --clr-bg-gradient-fullscreen-player: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.75) 72.4%, rgba(255, 255, 255, 0.80) 100%);
+
+   --clr-icon-buttons: var(--clr-secondary-700);
+   --clr-icon-buttons-hover: var(--clr-secondary-700);
+   --clr-error: #cc0000;
+   --clr-scrollbar-track: var(--clr-secondary-200);
+   --clr-scrollbar-thumb: var(--clr-secondary-300);
+
+   --clr-gradient-playing-song: linear-gradient(to right,
+            rgba(51, 8, 255, 0.08) 0%,
+            rgba(51, 0, 255, 0.07) 10%,
+            rgba(51, 0, 255, 0.05) 30%,
+            rgba(0, 0, 0, 0) 62%);
+   --clr-gradient-playlist-big: linear-gradient(to right, rgba(245, 245, 245, 0.64) 0%, rgba(245, 245, 245, 0.9) 60%, rgba(245, 245, 245, .95) 100%);
+   --clr-gradient-playlist-medium: linear-gradient(to top, rgba(245, 245, 245, 0.95) 0%, rgba(245, 245, 245, 0.90) 20%, rgba(245, 245, 245, 0.74) 100%);
+   --clr-gradient-playlist-small: linear-gradient(180deg, rgba(245, 245, 245, 0.64) 0%, rgba(245, 245, 245, 0.90) 100%, rgba(245, 245, 245, 0.90) 100%);
+
+   --clr--bg-transparent-003: var(--clr-transparent-dark-003);
+   --clr--bg-transparent-005: var(--clr-transparent-dark-005);
+
+   --clr-bg-disabled: var(--clr-secondary-300);
+   --clr-text-disabled: var(--clr-secondary-400);
+
+   --clr-progressbar-main: rgba(54, 54, 54, .25);
+   --clr-progressbar-fullscreenplayer: rgba(0, 0, 0, .25);
+   --clr-progressbar-main-completed: #363636;
+   --clr-progressbar-fullscreenplayer-completed: #000;
+}
+
+@media (min-width: 720px) AND (min-height: 840px){
+   :root {
+      --fs-smaller: var(--fs-300);
+      --fs-small: var(--fs-400);
+      --fs-common: var(--fs-500);
+      --fs-middle-sm: var(--fs-600);
+      --fs-middle: var(--fs-700);
+      --fs-big: var(--fs-900);
+   }
+}
+
+/* !dark mode */
+.dark {
+   --clr-heading: var(--clr-secondary-100);
+   --clr-button: var(--clr-primary-600);
+   --clr-button-text: var(--clr-primary-900);
+   --clr-input: var(--clr-secondary-800);
+   --clr-input-text: var(--clr-secondary-100);
+   --clr-url-text: var(--clr-secondary-500);
+   --clr-text: var(--clr-secondary-0);
+   --clr-bg: var(--clr-secondary-900);
+
+   --clr-progressbar-main: rgba(255, 255, 255, .25);
+   --clr-progressbar-fullscreenplayer: rgba(255, 255, 255, .25);
+   --clr-progressbar-main-completed: var(--clr-secondary-0);
+   --clr-progressbar-fullscreenplayer-completed: var(--clr-secondary-0);
+
+   --clr-bg: var(--clr-secondary-900);
+   --clr-bg-container: var(--clr-secondary-800);
+   --clr-bg-highlight: var(--clr-secondary-700);
+   --clr-bg-gradient-fullscreen-player: linear-gradient(180deg, rgba(64, 64, 64, 0.15) 0%, rgba(64, 64, 64, 0.35) 72.4%, rgba(64, 64, 64, 0.50) 100%);
+   --clr-icon-buttons: var(--clr-secondary-0);
+   --clr-scrollbar-track: var(--clr-secondary-600);
+   --clr-scrollbar-thumb: var(--clr-secondary-500);
+   --clr-gradient-playing-song: linear-gradient(to right,
+            hsla(267, 39%, 57%, 0.32) 0%,
+            hsla(267, 39%, 57%, 0.28) 10%,
+            hsla(267, 39%, 57%, 0.20) 30%,
+            rgba(0, 0, 0, 0) 62%);
+   --clr-gradient-playlist-big: linear-gradient(to right, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 60%, rgba(0, 0, 0, .35) 100%);
+   --clr-gradient-playlist-medium: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.55) 20%, rgba(0, 0, 0, 0.45) 100%);
+   --clr-gradient-playlist-small: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%, rgba(0, 0, 0, 0.65) 100%);
+   --clr-bg-disabled: var(--clr-secondary-600);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+   margin: 0;
+   padding: 0;
+   font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+   list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+   scroll-behavior: smooth;
+}
+
+html,
+body {
+   height: 100svh;
+   overflow: hidden;
+}
+
+/* Set core body defaults */
+body {
+   position: relative;
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+   text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+   max-width: 100%;
+   max-height: 100%;
+   display: block;
+   will-change: opacity;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+   border: none;
+   outline: none;
+   background: transparent;
+}
+
+button {
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+   html:focus-within {
+      scroll-behavior: smooth;
+   }
+
+   *,
+   *::before,
+   *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
+
+
+/* Utility classes */
+
+.clr-button {
+   background-color: var(--clr-button);
+}
+
+.clr-input {
+   background-color: var(--clr-input);
+}
+
+.clr-bg {
+   background-color: var(--clr-bg);
+}
+
+.clr-button-text {
+   color: var(--clr-button-text);
+}
+
+.clr-input-text {
+   color: var(--clr-input-text);
+}
+
+.clr-url-text {
+   color: var(--clr-url-text);
+}
+
+.fs-400 {
+   font-size: var(--fs-400);
+}
+
+.fs-500 {
+   font-size: var(--fs-500);
+}
+
+.fs-600 {
+   font-size: var(--fs-600);
+}
+
+.fs-700 {
+   font-size: var(--fs-700);
+}
+
+.fs-900 {
+   font-size: var(--fs-900);
+}
+
+.fw-400 {
+   font-size: var(--fw-400);
+}
+
+.text-center {
+   text-align: center;
+}
