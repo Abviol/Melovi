@@ -116,4 +116,4 @@ Melovi will be rewritten in another framework, most likely in Angular, in order 
 
 ## Acknowledgements
 
-Thanks to my friends [Bechke Oleksiy](https://github.com/OleksiyBechke), the backend developer, and [Misha Kulkin](https://www.instagram.com/mishakulkin/), the designer who helped me to release the idea.
+Thanks to my friends [Bechke Oleksiy](https://github.com/OleksiyBechke), the backend developer, and [Misha Kulkin](https://www.instagram.com/mishakulkin/), the designer, who helped me to release the idea.
