@@ -21,7 +21,6 @@ P.S. I created a new repo on my profile to freely showcase the project with no n
 1. [Description](#description)
 1. [Installation and Running](#installation-and-running)
 1. [Features](#features)
-1. [Features](#features)
    1. [App features](#app-features)
    1. [Player features](#player-features)
    1. [Features of the pop-up player for mobile devices](#features-of-the-pop-up-player-for-mobile-devices)
