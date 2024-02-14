@@ -178,7 +178,7 @@ function fetchPlaylist() {
       console.error('The playlist link must be from YouTube Music.');
       return;
    }
-  
+
    //? showpreloader
    showImportPreloader();
 
@@ -217,7 +217,7 @@ function fetchPlaylist() {
             hideImportPreloader();
 
             //? show an error
-            showMessage(`The playlist couldn't be found. Check whether the playlist is not private.git`, 'error')
+            showMessage(`The playlist couldn't be found. Check whether the playlist is not private.`, 'error')
             return
          }
 
